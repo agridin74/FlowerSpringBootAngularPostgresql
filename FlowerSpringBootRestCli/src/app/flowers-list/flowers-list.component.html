@@ -1,0 +1,7 @@
+<h1>Flowers</h1> 
+<div *ngFor="let flower of flowers | async" style="width: 300px;">
+	<flower-details [flower]='flower'></flower-details>
+</div>
+<div>
+	<button type="button" class="button btn-danger" (click)='deleteFlowers()'>Delete All</button>
+</div>

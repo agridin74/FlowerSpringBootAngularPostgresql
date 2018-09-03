@@ -1,0 +1,16 @@
+<div *ngIf="flower">
+	<div>
+		<label>Name: </label> {{flower.name}}
+	</div>
+	<div>
+		<label>Price: </label> {{flower.price}}
+	</div>
+	<div>
+		<label>Active: </label> {{flower.active}}
+	</div>
+	
+	<span class="button is-small btn-primary" *ngIf='flower.active' (click)='updateActive(false)'>Inactive</span>
+	<span class="button is-small btn-primary" *ngIf='!flower.active' (click)='updateActive(true)'>Active</span>
+	<span class="button is-small btn-danger" (click)='deleteFlower()'>Delete</span>
+	<hr/>
+</div>
